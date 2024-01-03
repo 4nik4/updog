@@ -10,6 +10,15 @@ interface ContainerProps {
   distance: number;
 }
 
+/**
+ * 
+ * @param param0 
+ * @returns 
+ * 
+ * todo bigger photo
+ * change font
+ */
+
 const WalkerCard: React.FC<ContainerProps> = ({ name, distance, price, photo, rating }) => {
   return (
     <div className='walker-card'>
