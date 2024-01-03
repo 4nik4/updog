@@ -1,6 +1,6 @@
 import { IonIcon } from '@ionic/react';
 import './walkerCard.css';
-import { heartOutline, mapOutline, star, starOutline } from 'ionicons/icons';
+import { mapOutline, starOutline } from 'ionicons/icons';
 
 interface ContainerProps {
   name: string;
@@ -21,23 +21,21 @@ const WalkerCard: React.FC<ContainerProps> = ({ name, distance, price, photo, ra
                 <div>
                     <div className='walker-card__name'>{name}</div>
                 </div>
-                <div className='walker-card__price'>
-                    {price}€
-                </div>
             </div>
             <div className='walker-card__footer'>
                 <div className='walker-card__footer-right'>
                     <div className='walker-card__distance'>
                         <IonIcon icon={mapOutline}></IonIcon>
-                        {distance}km away
+                        {distance}km
                     </div>
                     <div className='walker-card__rating'>
                         <IonIcon icon={starOutline}></IonIcon>
                         {rating}/5
                     </div>
+                    
                 </div>
-                <div className='walker-card__footer-left'>
-                    <IonIcon icon={heartOutline}></IonIcon>
+                <div className='walker-card__price'>
+                    {price}€
                 </div>
             </div>
         </div>

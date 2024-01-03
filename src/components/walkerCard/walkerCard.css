@@ -17,7 +17,7 @@
 }
 
 .walker-card__body {
-    padding: 6px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -31,12 +31,12 @@
     width: 100%;
 }
 .walker-card__price {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--ion-color-primary);
 }
 .walker-card__name {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--ion-color-dark-tint);
 }
@@ -47,7 +47,7 @@
 }
 .walker-card__footer-right {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     gap: 6px;
 }
@@ -68,9 +68,9 @@
     color: var(--ion-color-medium);
 }
 .walker-card__rating {
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     gap: 4px;
     align-items: center;
-    color: var(--ion-color-dark-tint);
+    color: var(--ion-color-medium);
 }
