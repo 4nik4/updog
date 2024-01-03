@@ -1,0 +1,12 @@
+.filter-button {
+    text-transform: capitalize;
+}
+.filter-button ion-icon {
+    margin-right: 4px;
+}
+
+.filters {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}

@@ -1,0 +1,76 @@
+.walker-card {
+    display: flex;
+    border: 1px solid var(--ion-color-primary);
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+.walker-card__photo {
+    display: flex;
+    vertical-align: middle;
+}
+.walker-card__photo img {
+    border-radius: 7px 0 0 7px;
+    object-fit: cover;
+    height: 93px;
+    width: 93px;
+}
+
+.walker-card__body {
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.walker-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.walker-card__price {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ion-color-primary);
+}
+.walker-card__name {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ion-color-dark-tint);
+}
+
+.walker-card__footer {
+    display: flex;
+    justify-content: space-between;
+}
+.walker-card__footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+}
+.walker-card__footer-left {
+    display: flex;
+    font-size: 24px;
+    align-items: end;
+    color: var(--ion-color-medium);
+}
+.walker-card__footer-left.selected {
+    color: var(--ion-color-danger-tint);
+}
+.walker-card__distance {
+    font-size: 12px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: var(--ion-color-medium);
+}
+.walker-card__rating {
+    font-size: 14px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: var(--ion-color-dark-tint);
+}
