@@ -1,0 +1,17 @@
+.walker-profile__photo {
+    display: flex;
+    vertical-align: middle;
+}
+.walker-profile__photo img {
+    object-fit: cover;
+    height: 300px;
+    width: auto;
+}
+
+.ion-page {
+    justify-content: flex-start !important;
+}
+
+.walker-profile__segments {
+    padding: 16px;
+}

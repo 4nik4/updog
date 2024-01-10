@@ -8,6 +8,7 @@ interface ContainerProps {
   rating: number;
   photo: string;
   distance: number;
+  openProfile: any
 }
 
 /**
@@ -19,9 +20,9 @@ interface ContainerProps {
  * change font
  */
 
-const WalkerCard: React.FC<ContainerProps> = ({ name, distance, price, photo, rating }) => {
+const WalkerCard: React.FC<ContainerProps> = ({ name, distance, price, photo, rating, openProfile }) => {
   return (
-    <div className='walker-card'>
+    <div className='walker-card' onClick={openProfile}>
         <div className='walker-card__photo'>
             <img src={photo}></img>
         </div>
