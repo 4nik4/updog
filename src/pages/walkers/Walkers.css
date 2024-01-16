@@ -10,3 +10,12 @@
     flex-grow: 1;
     justify-content: flex-end;
 }
+
+ion-button.close-btn {
+    --color: #3A8198;
+    font-size: 1.5rem;
+}
+
+.ion-page {
+    z-index: 0 !important;
+}

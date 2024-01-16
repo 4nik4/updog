@@ -1,0 +1,29 @@
+.info-segment {
+    padding: 8px;
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+p {
+    letter-spacing: 1px;
+}
+
+.colorful {
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--ion-color-secondary-tint);
+    border-radius: 30px;
+}
+
+.colorful h2 {
+    color: #4959A5;
+    letter-spacing: 2px;
+}
+
+.colorful .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

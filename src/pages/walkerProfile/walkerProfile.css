@@ -1,7 +1,50 @@
 .walker-profile__photo {
     display: flex;
     vertical-align: middle;
+    height: 200px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -250px;
 }
+
+.walker-profile__photo-avatar {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 130px;
+    height: 130px;
+    top: -90px;
+    border: 6px solid #BEE1ED;
+    border-radius: 50%;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.walker-profile__card-body {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.walker-profile__photo-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.walker-profile__photo-price {
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
 .walker-profile__photo img {
     object-fit: cover;
     height: 300px;
@@ -13,5 +56,86 @@
 }
 
 .walker-profile__segments {
-    padding: 16px;
+    margin: 8px;
+    padding: 12px;
+    padding-top: 36px;
+    border-radius: 10px;
+    background-color: white;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.walker-profile__card-body-details {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+ion-modal ion-content {
+    --background: #BEE1ED;
+    /*--background: linear-gradient(0deg, rgba(91,157,180,1) -8%, rgba(186,217,227,1) 14%, rgba(255,255,255,1) 66%);*/
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row.top {
+    justify-content: center;
+    flex-direction: column;
+}
+.row.bottom {
+    justify-content: center;
+
+}
+
+.walker-profile__photo-distance, .walker-profile__photo-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #92949c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.infos li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: unset;
+    position: relative;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 4px;
+    width: 40px;
+}
+.infos .price .value {
+    font-size: 18px;
+    font-weight: 500;
+} 
+.infos {
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: var(--base-size-x2) 50px var(--base-size-x2) 40px;
+    border-radius: 40px;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+}
+.infos .label {
+    color: #92949c;
+    
+}
+
+.ion-page {
+    contain: unset !important;
 }

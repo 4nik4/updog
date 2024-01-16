@@ -45,7 +45,7 @@ const WalkerCard: React.FC<ContainerProps> = ({ name, distance, price, photo, ra
                     
                 </div>
                 <div className='walker-card__price'>
-                    {price}€
+                    {price}€/h
                 </div>
             </div>
         </div>
