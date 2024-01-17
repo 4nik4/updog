@@ -1,0 +1,41 @@
+.message {
+    background-color: #d7d8da;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .darker {
+    background-color: #4959A5;
+    color: #fff;
+  }
+  
+  .message::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .message img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .message img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  }
+  
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+  
+  .time-left {
+    float: left;
+    color: #999;
+  }

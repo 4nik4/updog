@@ -18,7 +18,7 @@ const Walkers: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle></IonTitle>
+          <IonTitle>Walkers</IonTitle>
         </IonToolbar>
       </IonHeader>
 

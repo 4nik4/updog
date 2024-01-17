@@ -139,3 +139,9 @@ ul {
 .ion-page {
     contain: unset !important;
 }
+
+.walker-footer ion-button {
+    --background: transparent !important;
+    letter-spacing: 1px;
+    margin: 0px;
+}
