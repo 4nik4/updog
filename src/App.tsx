@@ -61,7 +61,7 @@ const App: React.FC = () => (
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon aria-hidden="true" icon={calendarOutline} />
-            <IonLabel>Schedule</IonLabel>
+            <IonLabel>My Schedule</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={chatbubbleOutline} />

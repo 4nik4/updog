@@ -18,7 +18,7 @@ p {
 }
 
 .colorful h2 {
-    color: #4959A5;
+    color: var(--ion-color-secondary-shade);
     letter-spacing: 2px;
 }
 
