@@ -33,11 +33,16 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import MessagesList from './pages/messages-list/messagesList';
+import MessageNew from './pages/message-new/MessageNew';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+
+
+
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
@@ -47,11 +52,17 @@ const App: React.FC = () => (
           <Route exact path="/tab2">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/messages">
+            <MessagesList />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
+          </Route>
+          <Route exact path="/message">
+            <Tab3 />
+          </Route>
+          <Route exact path="/message-new">
+            <MessageNew />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -63,7 +74,7 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={calendarOutline} />
             <IonLabel>My Schedule</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="messages" href="/messages">
             <IonIcon aria-hidden="true" icon={chatbubbleOutline} />
             <IonLabel>Messages</IonLabel>
           </IonTabButton>

@@ -1,0 +1,14 @@
+.unread-indicator {
+    background: var(--ion-color-primary-contrast);
+  
+    width: 10px;
+    height: 10px;
+  
+    border-radius: 100%;
+  
+  }
+
+
+h3.read {
+    font-weight: bold;
+}

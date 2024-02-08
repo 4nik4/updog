@@ -1,9 +1,9 @@
 import { IonContent, IonFooter, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import './Tab3.css';
+import './MessageNew.css';
 import { useEffect, useRef } from 'react';
 import { addCircle, send } from 'ionicons/icons';
 
-const Tab3: React.FC = () => {
+const MessageNew: React.FC = () => {
 
 
   useEffect(() => {
@@ -25,38 +25,6 @@ const Tab3: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen className="ion-padding" >
         <div id="mes">
-
-          <div className="message recieved">
-            <p> Ut enim ad minima. &#128513;</p>
-          </div>
-          <div className="message recieved">
-            <p> Neque porro quisquam est, qui. &#128514; &#128514;</p>
-          </div>
-          <div className="message recieved">
-            <p> tempora incidunt dolore.</p>
-          </div>
-          <div className="message sent">
-            <p>similique mollitia animi</p>
-          </div>
-          <div className="message recieved">
-            <p>veniam</p>
-          </div>
-          <div className="message recieved">
-            <p>sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-          </div>
-          <div className="message recieved">
-            <p> tempora incidunt dolore.</p>
-          </div>
-
-          <div className="message sent">
-            <p>culpa qui officia deserunt mollitia animi</p>
-          </div>
-          <div className="message sent">
-            <p>similique mollitia animi</p>
-          </div>
-          <div className="message sent">
-            <p>similique sunt in culpa qui officia deserunt mollitia animi &#128517;</p>
-          </div>
 
           <div className="message recieved">
             <p> tempora incidunt dolore.</p>
@@ -93,4 +61,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default MessageNew;

@@ -11,6 +11,7 @@ interface ContainerProps {
 }
 
 const WalkerProfile: React.FC<ContainerProps> = ({ photo }) => {
+  
   const segments = ["info", "availability", "reviews"];
   const slider = useRef<HTMLIonListElement>(null);
   const [value, setValue] = useState("info");
@@ -18,6 +19,7 @@ const WalkerProfile: React.FC<ContainerProps> = ({ photo }) => {
   const handleSegmentChange = (e: any) => {
     setValue(e.detail.value!);
   };
+
 
   return (
     <IonPage>
@@ -84,11 +86,6 @@ const WalkerProfile: React.FC<ContainerProps> = ({ photo }) => {
         </div>
 
       </IonContent>
-      <IonFooter collapse="fade" className='walker-footer'>
-        <IonToolbar>
-          <IonButton expand="full">Contact</IonButton>
-        </IonToolbar>
-      </IonFooter>
     </IonPage>
   );
 }
