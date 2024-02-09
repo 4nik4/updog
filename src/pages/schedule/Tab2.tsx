@@ -5,8 +5,6 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Tab2: React.FC = () => (
-  <>
-  
     <IonPage className='offset-top'>
 
       <IonContent fullscreen>
@@ -23,7 +21,20 @@ const Tab2: React.FC = () => (
 
         <div className="has-walkers">
 
-          <h4 className='ion-padding'>Upcoming walks</h4>
+          <div className='live-header'>
+            <h4 className='ion-padding'>Live feed</h4> <img height='50' src="../../../resources/img/dog-walk.gif" />
+          </div>
+
+          <img src="../../../resources/img/map.png" />
+
+
+          <div className='upcoming-header'>
+            <h4 className='ion-padding'>Upcoming walks</h4>
+            <div className='see-more'>
+              <IonButton fill="clear">See all</IonButton>
+            </div>
+
+          </div>
 
 
           <Swiper
@@ -34,7 +45,7 @@ const Tab2: React.FC = () => (
             onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
-              <IonCard>
+              <IonCard className='event-card'>
                 <IonCardHeader>
                   <IonCardSubtitle>11:00 am</IonCardSubtitle>
                   <IonCardSubtitle className='date'>02. Feb</IonCardSubtitle>
@@ -57,7 +68,7 @@ const Tab2: React.FC = () => (
               </IonCard>
             </SwiperSlide>
             <SwiperSlide>
-              <IonCard>
+              <IonCard className='event-card'>
                 <IonCardHeader>
 
                   <IonCardSubtitle>11:00 am</IonCardSubtitle>
@@ -83,7 +94,7 @@ const Tab2: React.FC = () => (
               </IonCard>
             </SwiperSlide>
             <SwiperSlide>
-              <IonCard>
+              <IonCard className='event-card'>
                 <IonCardHeader>
 
                   <IonCardSubtitle>10:30 am</IonCardSubtitle>
@@ -104,38 +115,31 @@ const Tab2: React.FC = () => (
 
               </IonCard>
             </SwiperSlide>
-            <SwiperSlide><IonCard>
-              <IonCardHeader>
-                <IonCardSubtitle>10:30 pm</IonCardSubtitle>
-                <IonCardSubtitle className='date'>10. Feb</IonCardSubtitle>
-                <IonCardSubtitle className='walker'>April May</IonCardSubtitle>
-                <div className='avatar-row'>
+            <SwiperSlide>
+              <IonCard className='event-card'>
+                <IonCardHeader>
+                  <IonCardSubtitle>10:30 pm</IonCardSubtitle>
+                  <IonCardSubtitle className='date'>10. Feb</IonCardSubtitle>
+                  <IonCardSubtitle className='walker'>April May</IonCardSubtitle>
+                  <div className='avatar-row'>
 
-                  <IonAvatar className='avatar'>
-                    <img alt="Silhouette of a person's head" src="../../../resources/img/walker8.png" />
-                  </IonAvatar>
-                  &
-                  <IonAvatar className='avatar'>
-                    <img alt="Dog profile" src="../../../resources/img/kairo_front.png" />
-                  </IonAvatar>
+                    <IonAvatar className='avatar'>
+                      <img alt="Silhouette of a person's head" src="../../../resources/img/walker8.png" />
+                    </IonAvatar>
+                    &
+                    <IonAvatar className='avatar'>
+                      <img alt="Dog profile" src="../../../resources/img/kairo_front.png" />
+                    </IonAvatar>
 
-                </div>
-              </IonCardHeader>
+                  </div>
+                </IonCardHeader>
 
-            </IonCard></SwiperSlide>
+              </IonCard></SwiperSlide>
           </Swiper>
-
-          <div className='ion-padding'>
-            <div className='see-more'>
-              <IonButton fill="clear">See all</IonButton>
-            </div>
-
-          </div>
 
         </div>
       </IonContent>
     </IonPage>
-  </>
 );
 
 export default Tab2;

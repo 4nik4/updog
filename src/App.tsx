@@ -100,7 +100,7 @@ const App: React.FC = () => (
               <MessagesList />
             </Route>
             <Route exact path="/">
-              <Redirect to="/tab1" />
+              <Redirect to="/tab2" />
             </Route>
             <Route exact path="/message">
               <Tab3 />
@@ -110,7 +110,7 @@ const App: React.FC = () => (
             </Route>
           </IonRouterOutlet>
 
-          <IonTabBar slot="bottom">
+          <IonTabBar slot="bottom" selectedTab='/tab2'>
             <IonTabButton tab="tab1" href="/tab1">
               <IonIcon aria-hidden="true" icon={pawOutline} />
               <IonLabel>Walkers</IonLabel>

@@ -7,7 +7,7 @@
     display: none;
 }
 
-ion-card {
+.event-card {
     height: 200px;
     display: flex;
 }
@@ -55,4 +55,16 @@ h4 {
 .avatar-row .avatar {
     height: 32px;
     width: 32px;
+}
+
+.live-header {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.upcoming-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

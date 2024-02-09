@@ -26,21 +26,11 @@ const Tab3: React.FC = () => {
       <IonContent fullscreen className="ion-padding" >
         <div id="mes">
 
-          <div className="message recieved">
-            <p> Ut enim ad minima. &#128513;</p>
-          </div>
-          <div className="message recieved">
-            <p> Neque porro quisquam est, qui. &#128514; &#128514;</p>
-          </div>
-          <div className="message recieved">
-            <p> tempora incidunt dolore.</p>
-          </div>
+          
           <div className="message sent">
             <p>similique mollitia animi</p>
           </div>
-          <div className="message recieved">
-            <p>veniam</p>
-          </div>
+          
           <div className="message recieved">
             <p>sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
           </div>
