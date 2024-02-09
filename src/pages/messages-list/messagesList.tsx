@@ -1,40 +1,32 @@
-import { IonAvatar, IonButton, IonContent, IonHeader, IonItem, IonItemDivider, IonLabel, IonNavLink, IonPage, IonRouterOutlet, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './messagesList.css';
-import MessagesListItem from '../../components/MessageListItem/messageListItem';
-import { IonReactRouter } from '@ionic/react-router';
-import { Route } from 'react-router';
-import Tab3 from '../messages/Tab3';
+import MessagesListItem from '../../components/MessageListItem/MessageListItem';
 
 
 const MessagesList: React.FC = () => {
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Messages</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+    <IonPage className='offset-top'>
       <IonContent fullscreen className="ion-padding">
         <input className='search-input' placeholder='Search'></input>
 
-        <MessagesListItem photo='https://ionicframework.com/docs/img/demos/avatar.svg'
+        <MessagesListItem photo='../../../resources/img/walker2.png'
           name='Mary Jane' preview='Sed ut perspiciatis...'
           sent='21m'
           read={false}
         ></MessagesListItem>
 
-        <MessagesListItem photo='https://ionicframework.com/docs/img/demos/avatar.svg'
+        <MessagesListItem photo='../../../resources/img/walker3.png'
           name='Bob Bobersonn' preview='Sed ut perspiciatis...'
           sent='123d'
           read={true}
         ></MessagesListItem>
-        <MessagesListItem photo='https://ionicframework.com/docs/img/demos/avatar.svg'
-          name='Lorem Ipsum' preview='Sed ut perspiciatis...'
+        <MessagesListItem photo='../../../resources/img/walker1.png'
+          name='John Doe' preview='Sed ut perspiciatis...'
           sent='3d'
           read={false}
         ></MessagesListItem>
-        <MessagesListItem photo='https://ionicframework.com/docs/img/demos/avatar.svg'
-          name='Jenny Doe' preview='Sed ut perspiciatis...'
+        <MessagesListItem photo='../../../resources/img/walker8.png'
+          name='April May' preview='Sed ut perspiciatis...'
           sent='45m'
           read={true}
         ></MessagesListItem>

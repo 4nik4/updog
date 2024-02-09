@@ -1,23 +1,141 @@
-import { IonContent, IonDatetime, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../../components/ExploreContainer';
+import { IonAvatar, IonButton, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonItem, IonLabel, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab2.css';
+import { Link } from 'react-router-dom';
+import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const Tab2: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>My Schedule</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen className="ion-padding">
+const Tab2: React.FC = () => (
+  <>
+  
+    <IonPage className='offset-top'>
 
-        <IonDatetime dayValues="5,10,15,20,25,30"></IonDatetime>
+      <IonContent fullscreen>
+        <div className="no-walkers ion-padding">
 
-        List of upcoming bookings...
+          <p>It seems you have nothing upcoming.</p>
+          <Link to="/">
+            <IonButton>
+              <IonLabel>Schedule a walk</IonLabel>
+            </IonButton>
+          </Link>
+        </div>
+
+
+        <div className="has-walkers">
+
+          <h4 className='ion-padding'>Upcoming walks</h4>
+
+
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={1}
+            centeredSlides={true}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <IonCard>
+                <IonCardHeader>
+                  <IonCardSubtitle>11:00 am</IonCardSubtitle>
+                  <IonCardSubtitle className='date'>02. Feb</IonCardSubtitle>
+                  <IonCardSubtitle className='walker'>Bob Bobersson</IonCardSubtitle>
+                  <div className='avatar-row'>
+
+                    <IonAvatar className='avatar'>
+                      <img alt="Silhouette of a person's head" src="../../../resources/img/walker3.png" />
+                    </IonAvatar>
+                    &
+                    <IonAvatar className='avatar'>
+                      <img alt="Dog profile" src="../../../resources/img/kongo_front.png" />
+                    </IonAvatar>
+
+                  </div>
+
+
+                </IonCardHeader>
+
+              </IonCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <IonCard>
+                <IonCardHeader>
+
+                  <IonCardSubtitle>11:00 am</IonCardSubtitle>
+                  <IonCardSubtitle className='date'>05. Feb</IonCardSubtitle>
+                  <IonCardSubtitle className='walker'>Mary Jane</IonCardSubtitle>
+                  <div className='avatar-row'>
+
+                    <IonAvatar className='avatar'>
+                      <img alt="Silhouette of a person's head" src="../../../resources/img/walker4.png" />
+                    </IonAvatar>
+                    &
+                    <IonAvatar className='avatar'>
+                      <img alt="Dog profile" src="../../../resources/img/kairo_front.png" />
+                    </IonAvatar>
+                    <IonAvatar className='avatar'>
+                      <img alt="Dog profile" src="../../../resources/img/kongo_front.png" />
+                    </IonAvatar>
+
+                  </div>
+
+                </IonCardHeader>
+
+              </IonCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <IonCard>
+                <IonCardHeader>
+
+                  <IonCardSubtitle>10:30 am</IonCardSubtitle>
+                  <IonCardSubtitle className='date'>07. Feb</IonCardSubtitle>
+                  <IonCardSubtitle className='walker'>Joe Joesonn</IonCardSubtitle>
+                  <div className='avatar-row'>
+
+                    <IonAvatar className='avatar'>
+                      <img alt="Silhouette of a person's head" src="../../../resources/img/walker7.png" />
+                    </IonAvatar>
+                    &
+                    <IonAvatar className='avatar'>
+                      <img alt="Dog profile" src="../../../resources/img/kongo_front.png" />
+                    </IonAvatar>
+
+                  </div>
+                </IonCardHeader>
+
+              </IonCard>
+            </SwiperSlide>
+            <SwiperSlide><IonCard>
+              <IonCardHeader>
+                <IonCardSubtitle>10:30 pm</IonCardSubtitle>
+                <IonCardSubtitle className='date'>10. Feb</IonCardSubtitle>
+                <IonCardSubtitle className='walker'>April May</IonCardSubtitle>
+                <div className='avatar-row'>
+
+                  <IonAvatar className='avatar'>
+                    <img alt="Silhouette of a person's head" src="../../../resources/img/walker8.png" />
+                  </IonAvatar>
+                  &
+                  <IonAvatar className='avatar'>
+                    <img alt="Dog profile" src="../../../resources/img/kairo_front.png" />
+                  </IonAvatar>
+
+                </div>
+              </IonCardHeader>
+
+            </IonCard></SwiperSlide>
+          </Swiper>
+
+          <div className='ion-padding'>
+            <div className='see-more'>
+              <IonButton fill="clear">See all</IonButton>
+            </div>
+
+          </div>
+
+        </div>
       </IonContent>
     </IonPage>
-  );
-};
+  </>
+);
 
 export default Tab2;

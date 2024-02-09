@@ -1,0 +1,58 @@
+.no-walkers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: none;
+}
+
+ion-card {
+    height: 200px;
+    display: flex;
+}
+ion-card-header {
+    gap: 2px
+}
+
+.walker {
+    padding-bottom: 4px;
+    min-height: 35px;
+    display: flex;
+    align-items: end;
+}
+
+.date {
+    font-size: larger;
+    color: var(--ion-color-primary-contrast);
+}
+
+.swiper {
+    margin: 0 -16px;
+}
+
+h4 {
+    margin-bottom: 0 !important;
+}
+
+.see-more {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    height: 28px;
+    width: 28px;
+    margin: 4px;;
+}
+
+.avatar-row {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.avatar-row .avatar {
+    height: 32px;
+    width: 32px;
+}
