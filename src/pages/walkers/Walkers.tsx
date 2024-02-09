@@ -132,7 +132,7 @@ const Walkers: React.FC = () => {
               <IonButton
                 strong={true} onClick={(e) => {
                   e.preventDefault();
-                  location.assign('http://localhost:5173/message-new');
+                  location.assign(window.location.origin + '/message-new');
                   setIsOpen(false)
                 }}
                 routerLink="/message" expand="full" routerDirection="none">Contact</IonButton>
