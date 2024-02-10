@@ -43,3 +43,11 @@
   justify-content: center;
   gap: 8px
 }
+
+.sender {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-left: 16px;
+}

@@ -43,3 +43,7 @@
   justify-content: center;
   gap: 8px
 }
+
+.message-header {
+  z-index: 20;
+}

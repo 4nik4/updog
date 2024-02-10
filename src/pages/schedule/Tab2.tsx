@@ -1,11 +1,28 @@
-import { IonAvatar, IonButton, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonItem, IonLabel, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonAvatar, IonButton, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Tab2.css';
 import { Link } from 'react-router-dom';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { arrowBack } from 'ionicons/icons';
 
 const Tab2: React.FC = () => (
-    <IonPage className='offset-top'>
+    <IonPage>
+
+<IonHeader>
+          <IonToolbar slot="start">
+            <IonButton fill='clear' size="small">
+              <IonIcon slot="icon-only" icon={arrowBack}></IonIcon>
+            </IonButton>
+            <IonButtons slot="end">
+              <IonMenuButton>
+                <IonAvatar className='avatar'>
+                  <img alt="Silhouette of a person's head" src="../../../resources/img/user.png" />
+                </IonAvatar>
+              </IonMenuButton>
+            </IonButtons>
+
+          </IonToolbar>
+        </IonHeader>
 
       <IonContent fullscreen>
         <div className="no-walkers ion-padding">

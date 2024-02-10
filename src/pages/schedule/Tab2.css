@@ -60,7 +60,6 @@ h4 {
 .live-header {
     display: flex;
     align-items: center;
-    padding-top: 16px;
 }
 
 .upcoming-header {

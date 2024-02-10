@@ -1,10 +1,9 @@
 import React, { useRef, useState } from 'react';
 import './walkerProfile.css'
-import { IonAvatar, IonButton, IonContent, IonFab, IonFabButton, IonFabList, IonFooter, IonIcon, IonLabel, IonPage, IonSegment, IonSegmentButton, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonLabel, IonPage, IonSegment, IonSegmentButton } from '@ionic/react';
 import InfoSegment from '../../components/InfoSegment/InfoSegment';
 import AvailabilitySegment from '../../components/AvailabilitySegment/AvailabilitySegment';
 import ReviewsSegment from '../../components/ReviewsSegment/ReviewsSegment';
-import { add, colorPalette, globe } from 'ionicons/icons';
 
 interface ContainerProps {
   photo: string

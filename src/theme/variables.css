@@ -333,3 +333,14 @@ img {
 .offset-top {
   padding-top: 32px;
 }
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header-ios ion-toolbar:last-of-type {
+  padding-top: 30px;
+}

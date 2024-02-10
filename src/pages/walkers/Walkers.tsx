@@ -1,7 +1,7 @@
-import { IonButton, IonButtons, IonContent, IonFooter, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonModal, IonPage, IonRange, IonSelect, IonSelectOption, IonTitle, IonToggle, IonToolbar } from '@ionic/react';
+import { IonAvatar, IonButton, IonButtons, IonContent, IonFooter, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonMenuButton, IonModal, IonPage, IonRange, IonSelect, IonSelectOption, IonTitle, IonToggle, IonToolbar } from '@ionic/react';
 import './Walkers.css';
 import WalkerCard from '../../components/walkerCard/walkerCard';
-import { closeOutline, filter } from 'ionicons/icons';
+import { arrowBack, closeOutline, filter } from 'ionicons/icons';
 import { useRef, useState } from 'react';
 import WalkerProfile from '../walkerProfile/walkerProfile';
 
@@ -21,7 +21,23 @@ const Walkers: React.FC = () => {
     modal.current?.dismiss(input.current?.value, 'confirm');
   }
   return (
-    <IonPage className='offset-top'>
+    <IonPage>
+
+<IonHeader>
+          <IonToolbar slot="start">
+            <IonButton fill='clear' size="small">
+              <IonIcon slot="icon-only" icon={arrowBack}></IonIcon>
+            </IonButton>
+            <IonButtons slot="end">
+              <IonMenuButton>
+                <IonAvatar className='avatar'>
+                  <img alt="Silhouette of a person's head" src="../../../resources/img/user.png" />
+                </IonAvatar>
+              </IonMenuButton>
+            </IonButtons>
+
+          </IonToolbar>
+        </IonHeader>
 
       <IonContent fullscreen className="ion-padding">
 

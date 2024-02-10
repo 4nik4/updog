@@ -22,7 +22,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { pawOutline, chatbubbleOutline, calendarOutline } from 'ionicons/icons';
+import { pawOutline, chatbubbleOutline, calendarOutline, arrowBack } from 'ionicons/icons';
 import Walkers from './pages/walkers/Walkers';
 import Tab2 from './pages/schedule/Tab2';
 import Tab3 from './pages/messages/Tab3';
@@ -50,86 +50,78 @@ import MessageNew from './pages/message-new/MessageNew';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
+const App: React.FC = () => {
 
-    <IonMenu side="end" contentId="main-content">
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Menu Content</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent className="ion-padding">
-        <IonItem>
-          <IonButton fill="clear">Profile</IonButton>
-        </IonItem>
-        <IonItem>
-          <IonButton fill="clear">Settings</IonButton>
-        </IonItem>
-        <IonItem>
-          <IonButton fill="clear">Log out</IonButton>
-        </IonItem>
-      </IonContent>
-    </IonMenu>
+  return (
+    <IonApp>
 
-    <IonPage id="main-content">
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="end">
-            <IonMenuButton>
-              <IonAvatar className='avatar'>
-                <img alt="Silhouette of a person's head" src="../../../resources/img/user.png" />
-              </IonAvatar>
-            </IonMenuButton>
-          </IonButtons>
+      <IonMenu side="end" contentId="main-content">
+        <IonHeader>
+          <IonToolbar>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent className="ion-padding">
+          <div className='menu-items'>
+            <div>
+              <IonItem>
+                <IonButton fill="clear">Profile</IonButton>
+              </IonItem>
+              <IonItem>
+                <IonButton fill="clear">Settings</IonButton>
+              </IonItem>
+            </div>
+            <IonItem>
+              <IonButton fill="clear">Log out</IonButton>
+            </IonItem>
+          </div>
+        </IonContent>
+      </IonMenu>
 
-        </IonToolbar>
-      </IonHeader>
+      <IonPage id="main-content">
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route exact path="/tab1">
+                <Walkers />
+              </Route>
+              <Route exact path="/tab2">
+                <Tab2 />
+              </Route>
+              <Route path="/messages">
+                <MessagesList />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/tab2" />
+              </Route>
+              <Route exact path="/message">
+                <Tab3 />
+              </Route>
+              <Route exact path="/message-new">
+                <MessageNew />
+              </Route>
+            </IonRouterOutlet>
 
-
-      <IonReactRouter>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route exact path="/tab1">
-              <Walkers />
-            </Route>
-            <Route exact path="/tab2">
-              <Tab2 />
-            </Route>
-            <Route path="/messages">
-              <MessagesList />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/tab2" />
-            </Route>
-            <Route exact path="/message">
-              <Tab3 />
-            </Route>
-            <Route exact path="/message-new">
-              <MessageNew />
-            </Route>
-          </IonRouterOutlet>
-
-          <IonTabBar slot="bottom" selectedTab='/tab2'>
-            <IonTabButton tab="tab1" href="/tab1">
-              <IonIcon aria-hidden="true" icon={pawOutline} />
-              <IonLabel>Walkers</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab2" href="/tab2">
-              <IonIcon aria-hidden="true" icon={calendarOutline} />
-              <IonLabel>My Schedule</IonLabel>
-              <IonBadge color="dark">1</IonBadge>
-            </IonTabButton>
-            <IonTabButton tab="messages" href="/messages">
-              <IonIcon aria-hidden="true" icon={chatbubbleOutline} />
-              <IonLabel>Messages</IonLabel>
-              <IonBadge color="dark">2</IonBadge>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
-      </IonReactRouter>
-    </IonPage>
-  </IonApp>
-);
+            <IonTabBar slot="bottom" selectedTab='/tab2'>
+              <IonTabButton tab="tab1" href="/tab1">
+                <IonIcon aria-hidden="true" icon={pawOutline} />
+                <IonLabel>Walkers</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="tab2" href="/tab2">
+                <IonIcon aria-hidden="true" icon={calendarOutline} />
+                <IonLabel>My Schedule</IonLabel>
+                <IonBadge color="dark">1</IonBadge>
+              </IonTabButton>
+              <IonTabButton tab="messages" href="/messages">
+                <IonIcon aria-hidden="true" icon={chatbubbleOutline} />
+                <IonLabel>Messages</IonLabel>
+                <IonBadge color="dark">2</IonBadge>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </IonReactRouter>
+      </IonPage>
+    </IonApp>
+  )
+};
 
 export default App;

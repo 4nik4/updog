@@ -1,11 +1,28 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './messagesList.css';
 import MessagesListItem from '../../components/MessageListItem/MessageListItem';
+import { arrowBack } from 'ionicons/icons';
 
 
 const MessagesList: React.FC = () => {
   return (
-    <IonPage className='offset-top'>
+    <IonPage>
+
+<IonHeader>
+          <IonToolbar slot="start">
+            <IonButton fill='clear' size="small">
+              <IonIcon slot="icon-only" icon={arrowBack}></IonIcon>
+            </IonButton>
+            <IonButtons slot="end">
+              <IonMenuButton>
+                <IonAvatar className='avatar'>
+                  <img alt="Silhouette of a person's head" src="../../../resources/img/user.png" />
+                </IonAvatar>
+              </IonMenuButton>
+            </IonButtons>
+
+          </IonToolbar>
+        </IonHeader>
       <IonContent fullscreen className="ion-padding">
         <input className='search-input' placeholder='Search'></input>
 
